@@ -1,0 +1,286 @@
+/* media.css */
+
+/* ==============================
+   LARGE TABLETS / SMALL LAPTOPS
+   ============================== */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1180px) { 
+  .wwd-services {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 1100px) { 
+.wwd-container {
+    flex-direction: column;
+    text-align: center;
+      display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .wwd-services {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .wwd-item p  {
+    max-width: 250px;
+      margin: 0 auto;   /* center inside the grid item */
+  line-height: 1.7; /* more spacing for readability */
+  font-size: 18px;
+  }
+}
+
+/* ==============================
+   TABLETS
+   ============================== */
+@media (max-width: 992px) {
+
+  .hero-image img {
+    width: 22rem;
+    height: auto;
+    margin-top: 80px;
+  }
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+  .who-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .who-right {
+    flex-direction: row;
+  }
+
+  .who-right img {
+    width: 48%;
+  }
+
+  .counters {
+    justify-content: center;
+  }
+
+  .wwd-content {
+    flex-direction: column;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 942px) {
+
+  .hero-image img {
+    width: 20rem;
+    height: auto;
+    margin-top: 159px;
+  }
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+}
+
+
+@media (max-width: 903px) {
+
+  .hero-image img {
+    width: 35rem;
+    height: auto;
+    margin-top: 100px;
+  }
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 29px;
+}
+}
+
+/* ==============================
+   MOBILE NAVIGATION
+   ============================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links.show a,
+  .nav-links.show button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links a:nth-child(2) { transition-delay: 0.2s; }
+  .nav-links a:nth-child(3) { transition-delay: 0.3s; }
+  .nav-links a:nth-child(4) { transition-delay: 0.4s; }
+  .nav-links button        { transition-delay: 0.5s; }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wwd-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wwd-services {
+    grid-template-columns: 1fr;
+  }
+
+  .wwd-item {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+
+  .hero {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    flex-direction: row; /* KEEP them beside each other */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero-btn {
+    padding: 4px 2px;
+    font-size: 14px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 260px;
+    height:auto;        /* VERY IMPORTANT */
+    margin-top: 0;       /* REMOVE FORCE */
+  }
+}
+
+
+/* ==============================
+   SMALL PHONES
+   ============================== */
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 20px;
+  }
+
+  .hero-btn {
+    padding: 8px 0px;
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-title {
+    font-size: 28px;
+  }
+
+  .experience {
+    font-size: 22px;
+  }
+
+  .counters {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .who-right {
+    flex-direction: column;
+  }
+
+  .wwd-item {
+    text-align: center;
+  }
+
+  .social-icons img,
+  .footer-social img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+}
